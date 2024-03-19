@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <Style>
+ 
+        body{
+            padding: 0px;
+            margin: 0px;
+            background-color: rgba(0, 0, 0, 0.447);
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        div.calculadora{
+            background-color: rgba(255, 0, 0, 0.381);
+            padding: 10px;
+            width: 400px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.232);
+            border-radius: 8px;
+        }
+ 
+        h1{
+            background-color: rgba(255, 0, 0, 0.473);
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            color: white;
+        }
+       
+        input{
+            width: 100px;
+            text-align: center;
+        }
+ 
+        div.Resultado{
+            padding-top: 5px;
+            color: white;
+        }
+ 
+ 
+ 
+    </Style>
+</head>
+<body>
+ 
+    <div class="calculadora">
+        <h1>Soma</h1>
+        <input type="number" name="lbl1" id="lbl1"> +
+        <input type="number" name="lbl2" id="lbl2">
+        <input type="button" value="somar" onclick="somar()">
+        <div class="Resultado" id="ressoma">Resultado da soma</div>
+        <h1>Subtração</h1>
+        <input type="number" name="lbl3" id="lbl3"> -
+        <input type="number" name="lbl4" id="lbl4">
+        <input type="button" value="subtrair" onclick="subtrair()">
+        <div class="Resultado" id="ressub">Resultado da subtração</div>
+        <h1>Multiplicação</h1>
+        <input type="number" name="lbl5" id="lbl5"> *
+        <input type="number" name="lbl6" id="lbl6">
+        <input type="button" value="multiplicar" onclick="multiplicar()">
+        <div class="Resultado" id="resmult">Resultado da multiplicação</div>
+        <h1>Divisão</h1>
+        <input type="number" name="lbl7" id="lbl7"> /
+        <input type="number" name="lbl8" id="lbl8">
+        <input type="button" value="dividir" onclick="dividir()">
+        <div class="Resultado" id="resdiv">Resultado da divisão</div>
+    </div>
+ 
+    <script>
+ 
+        function somar() {
+            var lbl1 = window.document.getElementById('lbl1')
+            var lbl2 = window.document.getElementById('lbl2')
+            var ressoma = window.document.getElementById('ressoma')
+            var n1 = Number (lbl1.value)
+            var n2 = Number (lbl2.value)
+            var res1 = n1 + n2
+            ressoma.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${res1}`
+ 
+        }
+ 
+        function subtrair() {
+            var lbl3 = window.document.getElementById('lbl3')
+            var lbl4 = window.document.getElementById('lbl4')
+            var ressub = window.document.getElementById('ressub')
+            var n3 = Number (lbl3.value)
+            var n4 = Number (lbl4.value)
+            var res2 = n3 - n4
+            ressub.innerHTML = `A subtração entre ${n3} e ${n4} é igual a ${res2}`
+ 
+        }
+ 
+        function multiplicar() {
+            var lbl5 = window.document.getElementById('lbl5')
+            var lbl6 = window.document.getElementById('lbl6')
+            var resmult = window.document.getElementById('resmult')
+            var n5 = Number (lbl5.value)
+            var n6 = Number (lbl6.value)
+            var res3 = n5 * n6
+            resmult.innerHTML = `A multiplicação entre ${n5} e ${n6} é igual a ${res3}`
+ 
+        }
+ 
+        function dividir() {
+            var lbl7 = window.document.getElementById('lbl7')
+            var lbl8 = window.document.getElementById('lbl8')
+            var ressoma = window.document.getElementById('resdiv')
+            var n7 = Number (lbl7.value)
+            var n8 = Number (lbl8.value)
+            var res4 = n7 / n8
+            resdiv.innerHTML = `A soma entre ${n7} e ${n8} é igual a ${res4}`
+ 
+        }
+ 
+    </script>
+ 
+</body>
+</html>
